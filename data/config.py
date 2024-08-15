@@ -1,11 +1,9 @@
 from environs import Env
 
-# environs kutubxonasidan foydalanish
 env = Env()
 env.read_env()
 
-# .env fayl ichidan quyidagilarni o'qiymiz
-BOT_TOKEN = env.str("BOT_TOKEN")  # Bot toekn
+BOT_TOKEN = env.str("BOT_TOKEN")  # Bot token
 ADMINS = env.list("ADMINS")  # adminlar ro'yxati
 IP = env.str("ip")  # Xosting ip manzili
-DATABASE_URL = env.str('DATABASE_URL')
+DATABASE_URL = 'postgresql://postgres:2012@localhost:5432/addmembers'
